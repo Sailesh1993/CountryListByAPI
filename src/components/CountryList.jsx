@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 function CountryList({ countries }) {
 
 
@@ -12,24 +12,9 @@ function CountryList({ countries }) {
     return lang;
   }
   return (
-    <div>
-      {/* <div className="row">
-        <div className="col-8">
-          <h4>Country</h4>
-        </div>
-        <div className="col-4">
-          <h4>Country code</h4>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-8">
-          <h4>Country</h4>
-        </div>
-        <div className="col-4">
-          <h4>Country code</h4>
-        </div>
-      </div> */}
-      <table className="table table-strip">
+    <div className="px-3 py-2">
+
+      <table className="table table-strip" style={{width:"80%"}}>
 
         <thead>
           <tr>
@@ -48,6 +33,7 @@ function CountryList({ countries }) {
             <th>
               Languages
             </th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -60,7 +46,7 @@ function CountryList({ countries }) {
               <td>{item.region}</td>
               <td>{item.population}</td>
               <td dangerouslySetInnerHTML={{ __html: getLanguages(item.languages) }} />
-              
+              <td><Link to={`/country/${item.name.common}`}><span>Details</span></Link></td>
             </tr>
           )
 
