@@ -43,13 +43,10 @@ function App() {
   };
 
   //Search function
-  const searchbyCountryName = (event) => {
-    console.log("key pressed");
-  };
   const filterCountries = () => {
     //const countriesfromApi2 = await fetchCountries(); <via fetch method>
 
-    let filtertext = document.getElementById("txtsearch").value;
+    let filtertext = document.getElementById("txtsearch").value.toLowerCase();
     const filtered = countries1.filter((a) =>
       a.name.common.toLowerCase().includes(filtertext)
     );

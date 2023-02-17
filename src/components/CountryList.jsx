@@ -12,7 +12,7 @@ function CountryList({ countries }) {
     return lang;
   }
   return (
-    <div className="px-3 py-2">
+    <div className="px-3 py-2 listmobilesize ">
 
       <table className="table table-strip" style={{width:"80%"}}>
 
@@ -27,8 +27,8 @@ function CountryList({ countries }) {
             <th>
               Regions
             </th>
-            <th>
-              Populations
+            <th className="hideInMobile">
+              Population
             </th>
             <th>
               Languages
@@ -44,7 +44,7 @@ function CountryList({ countries }) {
               </td>
               <td>{item.name.common}</td>
               <td>{item.region}</td>
-              <td>{item.population}</td>
+              <td className="hideInMobile">{item.population}</td>
               <td dangerouslySetInnerHTML={{ __html: getLanguages(item.languages) }} />
               <td><Link to={`/country/${item.name.common}`}><span>Details</span></Link></td>
             </tr>

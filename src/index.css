@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@media (max-width:600px){
+  .hideInMobile{
+    display: none !important;
+  }
+  .listmobilesize{
+    padding: 0px !important;
+    font-size: smaller;
+  }
+  .flagImage{
+    width: 90% !important;
+  }
+  .mobileSearch{
+    width: 90% !important;
+  }
+}

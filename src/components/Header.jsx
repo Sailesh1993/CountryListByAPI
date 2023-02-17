@@ -10,7 +10,7 @@ function header({filterCountry}) {
         </h2>
         </div>
         <div className='col-6'>
-        <input onKeyUp={filterCountry} style={{float:"right", width:"50%"}} type="text" id="txtsearch" className= 'px-3 py-1 col-2' placeholder='Search'></input>
+        <input onKeyUp={filterCountry} style={{float:"right", width:"50%"}} type="text" id="txtsearch" className= 'px-3 py-1 col-2 mobileSearch' placeholder='Search'></input>
 
         </div>
 
